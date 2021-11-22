@@ -1,0 +1,31 @@
+<%- include('./partials/header');  -%>
+
+    <div class="p-2">
+        <button type="button" class="btn btn-primary">
+            Data: <span class="badge bg-secondary"><%= info.length %> </span>
+        </button>
+        <button type="button" class="btn btn-primary">
+            Clients: <span class="badge bg-secondary"><%= clients.length %> </span>
+        </button>
+    </div>
+
+    <div class="container p-2">
+
+        <div class="row gap-2 mt-4">
+            <!-- Aca en vez de info es clients -->
+            <% clients.forEach(e => { %> 
+
+                <div class="card" style="width: 10rem; border-radius: 7%;" 
+                onclick="location.href='/client/<%= e.clientid %>';">
+                    <div class="card-body">
+                      <h6 class="card-subtitle text-muted"><%= e.nombre %> <%= e.apellido %> </h6>
+                      <p class="card-text"><%= e.clientid %> </p>
+                    </div>
+                </div>
+
+            <% }) %>
+
+        </div>
+    </div>
+
+<%- include('./partials/footer');  -%> 

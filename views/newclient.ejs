@@ -1,0 +1,42 @@
+<%- include('./partials/header');  -%>
+
+<div class="container p-4">
+
+    <form method="POST" action="/newclient" enctype="application/x-www-form-urlencoded">
+        <div class="card text-white bg-dark mb-3 border border-primary" style="max-width: 40rem;">
+            <div class="p-4">
+
+                <div class="card-header"><h2>New Client</h2></div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <input type="text" name="clientid" placeholder="Client ID"/>
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <input type="text" name="nombre" placeholder="First Name"/>
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <input type="text" name="apellido" placeholder="Last Name"/>
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <input type="text" name="fechaReset" placeholder="Last Reset Date"/>
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <input type="text" name="valorReset" placeholder="Last Reset Value"/>
+                </div>
+                
+                    <div class="d-grid gap-2 mt-4 btn-lg">
+                        <input type="submit" />
+                    </div>
+                
+            </div>            
+        </div>
+
+    </form>
+    
+</div>
+
+<%- include('./partials/footer');  -%> 

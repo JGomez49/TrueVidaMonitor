@@ -1,0 +1,16 @@
+<%- include('./partials/header');  -%>
+
+<div class="container p-4">
+
+    <h1 class="p-4">New file from RepVision</h1>
+
+    <form action="/files" method="post" enctype="multipart/form-data">
+
+        <input type="file" name="avatar">
+        <input type="submit" value="Upload">
+
+    </form>
+
+</div>
+
+<%- include('./partials/footer');  -%> 

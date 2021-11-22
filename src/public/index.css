@@ -1,0 +1,5 @@
+.card:hover{
+    background-color:dodgerblue;
+    transition: transform .7s; /* Animation */
+    transform: scale(1.1);
+}

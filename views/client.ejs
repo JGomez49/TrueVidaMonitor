@@ -1,0 +1,47 @@
+<%- include('./partials/header');  -%>
+
+<div class="container p-4 mb-2">
+
+    <% if (info.length > 0) { %>
+     
+        <h3>Client: <%= info[0].nombre %> <%= info[0].apellido %></h3>
+        <h6>ID: <%= info[0].clientid %></h6>
+        <% clients.forEach(e => { %>
+            <% if (e.clientid == info[0].clientid ) { %>
+                <h6 id="valorReset"><%= e.valorReset %></h6>
+            <% } %>
+        <% }) %>
+
+        <div class="row align-items-start">
+
+            <div class="row">
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+
+            <div class="row p-4">
+                <table class="table table-dark table-striped" id="tablacliente">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">AUA Date</th>
+                            <th scope="col">AUA Value</th>
+                        </tr>
+                    </thead>              
+                    <tbody>
+                        <% i=1 %>                        
+                        <% info.forEach(e => { %>       
+                            <tr>
+                                <th scope="row"><%= i %></th>
+                                <td><%= e.fecha %></td>
+                                <td><%= e.aua %></td>
+                            </tr>      
+                            <% i=i+1 %> 
+                        <% }) %>                      
+                    </tbody>               
+                </table>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<%- include('./partials/footer');  -%> 
